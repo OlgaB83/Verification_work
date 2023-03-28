@@ -11,3 +11,21 @@ void PrintArray(string[] array)
 }
 Console.Write("Заданный массив: ");
 PrintArray(array);
+
+Console.WriteLine(Environment.NewLine);
+
+//найти строки массива из трех символов.
+    var result = new string[array.Length];
+    var nameSize = 0;
+    foreach (var name in array)
+    {
+        if (name.Length <= 3)
+        {
+            result[nameSize] = name;
+            nameSize++;
+        }
+    }
+
+Console.Write($"Строки заданного массива из трех символов: ");
+Console.WriteLine(string.Join(", ", result));
+
